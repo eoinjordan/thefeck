@@ -26,7 +26,7 @@ class TestGeneric(object):
 
     def test_app_alias(self, shell):
         assert 'alias feck' in shell.app_alias('feck')
-        assert 'alias FUCK' in shell.app_alias('FUCK')
+        assert 'alias FECK' in shell.app_alias('FECK')
         assert 'thefeck' in shell.app_alias('feck')
         assert 'TF_ALIAS=feck PYTHONIOENCODING' in shell.app_alias('feck')
         assert 'PYTHONIOENCODING=utf-8 thefeck' in shell.app_alias('feck')

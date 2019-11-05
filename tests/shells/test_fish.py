@@ -23,10 +23,10 @@ class TestFish(object):
 
     @pytest.mark.parametrize('key, value', [
         ('TF_OVERRIDDEN_ALIASES', 'cut,git,sed'),  # legacy
-        ('THEFUCK_OVERRIDDEN_ALIASES', 'cut,git,sed'),
-        ('THEFUCK_OVERRIDDEN_ALIASES', 'cut, git, sed'),
-        ('THEFUCK_OVERRIDDEN_ALIASES', ' cut,\tgit,sed\n'),
-        ('THEFUCK_OVERRIDDEN_ALIASES', '\ncut,\n\ngit,\tsed\r')])
+        ('THEFECK_OVERRIDDEN_ALIASES', 'cut,git,sed'),
+        ('THEFECK_OVERRIDDEN_ALIASES', 'cut, git, sed'),
+        ('THEFECK_OVERRIDDEN_ALIASES', ' cut,\tgit,sed\n'),
+        ('THEFECK_OVERRIDDEN_ALIASES', '\ncut,\n\ngit,\tsed\r')])
     def test_get_overridden_aliases(self, shell, os_environ, key, value):
         os_environ[key] = value
         overridden = shell._get_overridden_aliases()
@@ -78,7 +78,7 @@ class TestFish(object):
 
     def test_app_alias(self, shell):
         assert 'function feck' in shell.app_alias('feck')
-        assert 'function FUCK' in shell.app_alias('FUCK')
+        assert 'function FECK' in shell.app_alias('FECK')
         assert 'thefeck' in shell.app_alias('feck')
         assert 'TF_SHELL=fish' in shell.app_alias('feck')
         assert 'TF_ALIAS=feck PYTHONIOENCODING' in shell.app_alias('feck')
@@ -87,11 +87,11 @@ class TestFish(object):
 
     def test_app_alias_alter_history(self, settings, shell):
         settings.alter_history = True
-        assert 'builtin history delete' in shell.app_alias('FUCK')
-        assert 'builtin history merge' in shell.app_alias('FUCK')
+        assert 'builtin history delete' in shell.app_alias('FECK')
+        assert 'builtin history merge' in shell.app_alias('FECK')
         settings.alter_history = False
-        assert 'builtin history delete' not in shell.app_alias('FUCK')
-        assert 'builtin history merge' not in shell.app_alias('FUCK')
+        assert 'builtin history delete' not in shell.app_alias('FECK')
+        assert 'builtin history merge' not in shell.app_alias('FECK')
 
     def test_get_history(self, history_lines, shell):
         history_lines(['- cmd: ls', '  when: 1432613911',

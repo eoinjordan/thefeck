@@ -45,20 +45,20 @@ DEFAULT_SETTINGS = {'rules': DEFAULT_RULES,
                     'num_close_matches': 3,
                     'env': {'LC_ALL': 'C', 'LANG': 'C', 'GIT_TRACE': '1'}}
 
-ENV_TO_ATTR = {'THEFUCK_RULES': 'rules',
-               'THEFUCK_EXCLUDE_RULES': 'exclude_rules',
-               'THEFUCK_WAIT_COMMAND': 'wait_command',
-               'THEFUCK_REQUIRE_CONFIRMATION': 'require_confirmation',
-               'THEFUCK_NO_COLORS': 'no_colors',
-               'THEFUCK_DEBUG': 'debug',
-               'THEFUCK_PRIORITY': 'priority',
-               'THEFUCK_HISTORY_LIMIT': 'history_limit',
-               'THEFUCK_ALTER_HISTORY': 'alter_history',
-               'THEFUCK_WAIT_SLOW_COMMAND': 'wait_slow_command',
-               'THEFUCK_SLOW_COMMANDS': 'slow_commands',
-               'THEFUCK_REPEAT': 'repeat',
-               'THEFUCK_INSTANT_MODE': 'instant_mode',
-               'THEFUCK_NUM_CLOSE_MATCHES': 'num_close_matches'}
+ENV_TO_ATTR = {'THEFECK_RULES': 'rules',
+               'THEFECK_EXCLUDE_RULES': 'exclude_rules',
+               'THEFECK_WAIT_COMMAND': 'wait_command',
+               'THEFECK_REQUIRE_CONFIRMATION': 'require_confirmation',
+               'THEFECK_NO_COLORS': 'no_colors',
+               'THEFECK_DEBUG': 'debug',
+               'THEFECK_PRIORITY': 'priority',
+               'THEFECK_HISTORY_LIMIT': 'history_limit',
+               'THEFECK_ALTER_HISTORY': 'alter_history',
+               'THEFECK_WAIT_SLOW_COMMAND': 'wait_slow_command',
+               'THEFECK_SLOW_COMMANDS': 'slow_commands',
+               'THEFECK_REPEAT': 'repeat',
+               'THEFECK_INSTANT_MODE': 'instant_mode',
+               'THEFECK_NUM_CLOSE_MATCHES': 'num_close_matches'}
 
 SETTINGS_HEADER = u"""# The Feck settings file
 #
@@ -72,7 +72,7 @@ SETTINGS_HEADER = u"""# The Feck settings file
 
 """
 
-ARGUMENT_PLACEHOLDER = 'THEFUCK_ARGUMENT_PLACEHOLDER'
+ARGUMENT_PLACEHOLDER = 'THEFECK_ARGUMENT_PLACEHOLDER'
 
 CONFIGURATION_TIMEOUT = 60
 

@@ -19,7 +19,7 @@ How to reproduce the bug:
 
     FILL THIS IN
 
-The output of The Feck with `THEFUCK_DEBUG=true` exported (typically execute `export THEFUCK_DEBUG=true` in your shell before The Feck):
+The output of The Feck with `THEFECK_DEBUG=true` exported (typically execute `export THEFECK_DEBUG=true` in your shell before The Feck):
 
     FILL THIS IN
 

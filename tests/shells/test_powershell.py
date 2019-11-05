@@ -20,7 +20,7 @@ class TestPowershell(object):
 
     def test_app_alias(self, shell):
         assert 'function feck' in shell.app_alias('feck')
-        assert 'function FUCK' in shell.app_alias('FUCK')
+        assert 'function FECK' in shell.app_alias('FECK')
         assert 'thefeck' in shell.app_alias('feck')
 
     def test_how_to_configure(self, shell):

@@ -25,7 +25,7 @@ export SAVEHIST=100
 export HISTSIZE=100
 eval $(thefeck --alias {})
 setopt INC_APPEND_HISTORY
-echo "instant mode ready: $THEFUCK_INSTANT_MODE"
+echo "instant mode ready: $THEFECK_INSTANT_MODE"
 ' > ~/.zshrc'''
 
 

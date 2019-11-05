@@ -11,8 +11,8 @@ the following basic information:
   - your shell and its version (`bash`, `zsh`, *Windows PowerShell*, etc.);
   - your system (Debian 7, ArchLinux, Windows, etc.);
   - how to reproduce the bug;
-  - the output of The Feck with `THEFUCK_DEBUG=true` exported (typically execute
-    `export THEFUCK_DEBUG=true` in your shell before The Feck);
+  - the output of The Feck with `THEFECK_DEBUG=true` exported (typically execute
+    `export THEFECK_DEBUG=true` in your shell before The Feck);
   - if the bug only appears with a specific application, the output of that
     application and its version;
   - anything else you think is relevant.

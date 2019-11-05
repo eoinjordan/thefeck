@@ -62,7 +62,7 @@ def _get_output_lines(script, log_file):
 
 
 def _skip_old_lines(log_file):
-    size = os.path.getsize(os.environ['THEFUCK_OUTPUT_LOG'])
+    size = os.path.getsize(os.environ['THEFECK_OUTPUT_LOG'])
     if size > const.LOG_SIZE_IN_BYTES:
         log_file.seek(size - const.LOG_SIZE_IN_BYTES)
 
@@ -78,7 +78,7 @@ def get_output(script):
         logs.warn('Experimental instant mode is Python 3+ only')
         return None
 
-    if 'THEFUCK_OUTPUT_LOG' not in os.environ:
+    if 'THEFECK_OUTPUT_LOG' not in os.environ:
         logs.warn("Output log isn't specified")
         return None
 
@@ -90,7 +90,7 @@ def get_output(script):
 
     try:
         with logs.debug_time(u'Read output from log'):
-            fd = os.open(os.environ['THEFUCK_OUTPUT_LOG'], os.O_RDONLY)
+            fd = os.open(os.environ['THEFECK_OUTPUT_LOG'], os.O_RDONLY)
             buffer = mmap.mmap(fd, const.LOG_SIZE_IN_BYTES, mmap.MAP_SHARED, mmap.PROT_READ)
             _skip_old_lines(buffer)
             lines = _get_output_lines(script, buffer)

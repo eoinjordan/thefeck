@@ -46,7 +46,7 @@ class TestTcsh(object):
     def test_app_alias(self, shell):
         assert 'setenv TF_SHELL tcsh' in shell.app_alias('feck')
         assert 'alias feck' in shell.app_alias('feck')
-        assert 'alias FUCK' in shell.app_alias('FUCK')
+        assert 'alias FECK' in shell.app_alias('FECK')
         assert 'thefeck' in shell.app_alias('feck')
 
     def test_get_history(self, history_lines, shell):

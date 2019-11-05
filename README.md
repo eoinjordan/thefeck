@@ -137,7 +137,7 @@ It is recommended that you place this command in your `.bash_profile`,
 ```bash
 eval $(thefeck --alias)
 # You can use whatever you want as an alias, like for Mondays:
-eval $(thefeck --alias FUCK)
+eval $(thefeck --alias FECK)
 ```
 
 [Or in your shell config (Bash, Zsh, Fish, Powershell, tcsh).](https://github.com/nvbn/thefeck/wiki/Shell-aliases)
@@ -421,31 +421,31 @@ num_close_matches = 5
 
 Or via environment variables:
 
-* `THEFUCK_RULES` &ndash; list of enabled rules, like `DEFAULT_RULES:rm_root` or `sudo:no_command`;
-* `THEFUCK_EXCLUDE_RULES` &ndash; list of disabled rules, like `git_pull:git_push`;
-* `THEFUCK_REQUIRE_CONFIRMATION` &ndash; require confirmation before running new command, `true/false`;
-* `THEFUCK_WAIT_COMMAND` &ndash; max amount of time in seconds for getting previous command output;
-* `THEFUCK_NO_COLORS` &ndash; disable colored output, `true/false`;
-* `THEFUCK_PRIORITY` &ndash; priority of the rules, like `no_command=9999:apt_get=100`,
+* `THEFECK_RULES` &ndash; list of enabled rules, like `DEFAULT_RULES:rm_root` or `sudo:no_command`;
+* `THEFECK_EXCLUDE_RULES` &ndash; list of disabled rules, like `git_pull:git_push`;
+* `THEFECK_REQUIRE_CONFIRMATION` &ndash; require confirmation before running new command, `true/false`;
+* `THEFECK_WAIT_COMMAND` &ndash; max amount of time in seconds for getting previous command output;
+* `THEFECK_NO_COLORS` &ndash; disable colored output, `true/false`;
+* `THEFECK_PRIORITY` &ndash; priority of the rules, like `no_command=9999:apt_get=100`,
 rule with lower `priority` will be matched first;
-* `THEFUCK_DEBUG` &ndash; enables debug output, `true/false`;
-* `THEFUCK_HISTORY_LIMIT` &ndash; how many history commands will be scanned, like `2000`;
-* `THEFUCK_ALTER_HISTORY` &ndash; push fixed command to history `true/false`;
-* `THEFUCK_WAIT_SLOW_COMMAND` &ndash; max amount of time in seconds for getting previous command output if it in `slow_commands` list;
-* `THEFUCK_SLOW_COMMANDS` &ndash; list of slow commands, like `lein:gradle`;
-* `THEFUCK_NUM_CLOSE_MATCHES` &ndash; maximum number of close matches to suggest, like `5`.
+* `THEFECK_DEBUG` &ndash; enables debug output, `true/false`;
+* `THEFECK_HISTORY_LIMIT` &ndash; how many history commands will be scanned, like `2000`;
+* `THEFECK_ALTER_HISTORY` &ndash; push fixed command to history `true/false`;
+* `THEFECK_WAIT_SLOW_COMMAND` &ndash; max amount of time in seconds for getting previous command output if it in `slow_commands` list;
+* `THEFECK_SLOW_COMMANDS` &ndash; list of slow commands, like `lein:gradle`;
+* `THEFECK_NUM_CLOSE_MATCHES` &ndash; maximum number of close matches to suggest, like `5`.
 
 For example:
 
 ```bash
-export THEFUCK_RULES='sudo:no_command'
-export THEFUCK_EXCLUDE_RULES='git_pull:git_push'
-export THEFUCK_REQUIRE_CONFIRMATION='true'
-export THEFUCK_WAIT_COMMAND=10
-export THEFUCK_NO_COLORS='false'
-export THEFUCK_PRIORITY='no_command=9999:apt_get=100'
-export THEFUCK_HISTORY_LIMIT='2000'
-export THEFUCK_NUM_CLOSE_MATCHES='5'
+export THEFECK_RULES='sudo:no_command'
+export THEFECK_EXCLUDE_RULES='git_pull:git_push'
+export THEFECK_REQUIRE_CONFIRMATION='true'
+export THEFECK_WAIT_COMMAND=10
+export THEFECK_NO_COLORS='false'
+export THEFECK_PRIORITY='no_command=9999:apt_get=100'
+export THEFECK_HISTORY_LIMIT='2000'
+export THEFECK_NUM_CLOSE_MATCHES='5'
 ```
 
 ## Third-party packages with rules
