@@ -16,7 +16,7 @@ More examples:
 E: Could not open lock file /var/lib/dpkg/lock - open (13: Permission denied)
 E: Unable to lock the administration directory (/var/lib/dpkg/), are you root?
 
-➜ fuck
+➜ feck
 sudo apt-get install vim [enter/↑/↓/ctrl+c]
 [sudo] password for nvbn:
 Reading package lists... Done
@@ -31,7 +31,7 @@ To push the current branch and set the remote as upstream, use
     git push --set-upstream origin master
 
 
-➜ fuck
+➜ feck
 git push --set-upstream origin master [enter/↑/↓/ctrl+c]
 Counting objects: 9, done.
 ...
@@ -44,7 +44,7 @@ No command 'puthon' found, did you mean:
  Command 'python' from package 'python3' (main)
 zsh: command not found: puthon
 
-➜ fuck
+➜ feck
 python [enter/↑/↓/ctrl+c]
 Python 3.4.2 (default, Oct  8 2014, 13:08:17)
 ...
@@ -57,7 +57,7 @@ git: 'brnch' is not a git command. See 'git --help'.
 Did you mean this?
     branch
 
-➜ fuck
+➜ feck
 git branch [enter/↑/↓/ctrl+c]
 * master
 ```
@@ -69,7 +69,7 @@ git branch [enter/↑/↓/ctrl+c]
 Did you mean this?
          repl
 
-➜ fuck
+➜ feck
 lein repl [enter/↑/↓/ctrl+c]
 nREPL server started on port 54848 on host 127.0.0.1 - nrepl://127.0.0.1:54848
 REPL-y 0.3.1
@@ -84,7 +84,7 @@ If you're not afraid of blindly running corrected commands, the
 E: Could not open lock file /var/lib/dpkg/lock - open (13: Permission denied)
 E: Unable to lock the administration directory (/var/lib/dpkg/), are you root?
 
-➜ fuck
+➜ feck
 sudo apt-get install vim
 [sudo] password for nvbn:
 Reading package lists... Done
@@ -102,45 +102,45 @@ Reading package lists... Done
 On OS X, you can install *The Fuck* via [Homebrew][homebrew] (or via [Linuxbrew][linuxbrew] on Linux):
 
 ```bash
-brew install thefuck
+brew install thefeck
 ```
 
 On Ubuntu / Mint, install *The Fuck* with the following commands:
 ```bash
 sudo apt update
 sudo apt install python3-dev python3-pip python3-setuptools
-sudo pip3 install thefuck
+sudo pip3 install thefeck
 ```
 
 On FreeBSD, install *The Fuck* with the following commands:
 ```bash
-pkg install thefuck
+pkg install thefeck
 ```
 
 On ChromeOS, install *The Fuck* using [chromebrew](https://github.com/skycocker/chromebrew) with the following command:
 ```bash
-crew install thefuck
+crew install thefeck
 ```
 
 On other systems, install *The Fuck*  by using `pip`:
 
 ```bash
-pip install thefuck
+pip install thefeck
 ```
 
-[Alternatively, you may use an OS package manager (OS X, Ubuntu, Arch).](https://github.com/nvbn/thefuck/wiki/Installation)
+[Alternatively, you may use an OS package manager (OS X, Ubuntu, Arch).](https://github.com/nvbn/thefeck/wiki/Installation)
 
 <a href='#manual-installation' name='manual-installation'>#</a>
 It is recommended that you place this command in your `.bash_profile`,
 `.bashrc`, `.zshrc` or other startup script:
 
 ```bash
-eval $(thefuck --alias)
+eval $(thefeck --alias)
 # You can use whatever you want as an alias, like for Mondays:
-eval $(thefuck --alias FUCK)
+eval $(thefeck --alias FUCK)
 ```
 
-[Or in your shell config (Bash, Zsh, Fish, Powershell, tcsh).](https://github.com/nvbn/thefuck/wiki/Shell-aliases)
+[Or in your shell config (Bash, Zsh, Fish, Powershell, tcsh).](https://github.com/nvbn/thefeck/wiki/Shell-aliases)
 
 Changes are only available in a new shell session. To make changes immediately
 available, run `source ~/.bashrc` (or your shell config file like `.zshrc`).
@@ -148,19 +148,19 @@ available, run `source ~/.bashrc` (or your shell config file like `.zshrc`).
 To run fixed commands without confirmation, use the `--yeah` option (or just `-y` for short, or `--hard` if you're especially frustrated):
 
 ```bash
-fuck --yeah
+feck --yeah
 ```
 
 To fix commands recursively until succeeding, use the `-r` option:
 
 ```bash
-fuck -r
+feck -r
 ```
 
 ## Updating
 
 ```bash
-pip3 install thefuck --upgrade
+pip3 install thefeck --upgrade
 ```
 
 **Note: Alias functionality was changed in v1.34 of *The Fuck***
@@ -197,12 +197,12 @@ following rules are enabled by default:
 * `fix_alt_space` &ndash; replaces Alt+Space with Space character;
 * `fix_file` &ndash; opens a file with an error in your `$EDITOR`;
 * `gem_unknown_command` &ndash; fixes wrong `gem` commands;
-* `git_add` &ndash; fixes *"pathspec 'foo' did not match any file(s) known to git."*;
+* `git_add` &ndash; fixes *"pathspec 'bar' did not match any file(s) known to git."*;
 * `git_add_force` &ndash; adds `--force` to `git add <pathspec>...` when paths are .gitignore'd;
 * `git_bisect_usage` &ndash; fixes `git bisect strt`, `git bisect goood`, `git bisect rset`, etc. when bisecting;
 * `git_branch_delete` &ndash; changes `git branch -d` to `git branch -D`;
 * `git_branch_delete_checked_out` &ndash; changes `git branch -d` to `git checkout master && git branch -D` when trying to delete a checked out branch;
-* `git_branch_exists` &ndash; offers `git branch -d foo`, `git branch -D foo` or `git checkout foo` when creating a branch that already exists;
+* `git_branch_exists` &ndash; offers `git branch -d bar`, `git branch -D bar` or `git checkout bar` when creating a branch that already exists;
 * `git_branch_list` &ndash; catches `git branch list` in place of `git branch` and removes created branch;
 * `git_checkout` &ndash; fixes branch name or creates new branch;
 * `git_commit_amend` &ndash; offers `git commit --amend` after previous commit;
@@ -335,7 +335,7 @@ default:
 ## Creating your own rules
 
 To add your own rule, create a file named `your-rule-name.py`
-in `~/.config/thefuck/rules`. The rule file must contain two functions:
+in `~/.config/thefeck/rules`. The rule file must contain two functions:
 
 ```python
 match(command: Command) -> bool
@@ -354,9 +354,9 @@ Your rule should not change `Command`.
 
 
 **Rules api changed in 3.0:** To access a rule's settings, import it with
- `from thefuck.conf import settings`
+ `from thefeck.conf import settings`
 
-`settings` is a special object assembled from `~/.config/thefuck/settings.py`,
+`settings` is a special object assembled from `~/.config/thefeck/settings.py`,
 and values from env ([see more below](#settings)).
 
 A simple example rule for running a script with `sudo`:
@@ -381,16 +381,16 @@ priority = 1000  # Lower first, default is 1000
 requires_output = True
 ```
 
-[More examples of rules](https://github.com/nvbn/thefuck/tree/master/thefuck/rules),
-[utility functions for rules](https://github.com/nvbn/thefuck/tree/master/thefuck/utils.py),
-[app/os-specific helpers](https://github.com/nvbn/thefuck/tree/master/thefuck/specific/).
+[More examples of rules](https://github.com/nvbn/thefeck/tree/master/thefeck/rules),
+[utility functions for rules](https://github.com/nvbn/thefeck/tree/master/thefeck/utils.py),
+[app/os-specific helpers](https://github.com/nvbn/thefeck/tree/master/thefeck/specific/).
 
 ## Settings
 
-Several *The Fuck* parameters can be changed in the file `$XDG_CONFIG_HOME/thefuck/settings.py`
+Several *The Fuck* parameters can be changed in the file `$XDG_CONFIG_HOME/thefeck/settings.py`
 (`$XDG_CONFIG_HOME` defaults to `~/.config`):
 
-* `rules` &ndash; list of enabled rules, by default `thefuck.const.DEFAULT_RULES`;
+* `rules` &ndash; list of enabled rules, by default `thefeck.const.DEFAULT_RULES`;
 * `exclude_rules` &ndash; list of disabled rules, by default `[]`;
 * `require_confirmation` &ndash; requires confirmation before running new command, by default `True`;
 * `wait_command` &ndash; max amount of time in seconds for getting previous command output;
@@ -451,12 +451,12 @@ export THEFUCK_NUM_CLOSE_MATCHES='5'
 ## Third-party packages with rules
 
 If you'd like to make a specific set of non-public rules, but would still like
-to share them with others, create a package named `thefuck_contrib_*` with
+to share them with others, create a package named `thefeck_contrib_*` with
 the following structure:
 
 ```
-thefuck_contrib_foo
-  thefuck_contrib_foo
+thefeck_contrib_bar
+  thefeck_contrib_bar
     rules
       __init__.py
       *third-party rules*
@@ -475,7 +475,7 @@ then reading the log.
 
 [![gif with instant mode][instant-mode-gif-link]][instant-mode-gif-link]
 
-Currently, instant mode only supports Python 3 with bash or zsh. zsh's autocorrect function also needs to be disabled in order for thefuck to work properly.
+Currently, instant mode only supports Python 3 with bash or zsh. zsh's autocorrect function also needs to be disabled in order for thefeck to work properly.
 
 To enable instant mode, add `--enable-experimental-instant-mode`
 to the alias initialization in `.bashrc`, `.bash_profile` or `.zshrc`.
@@ -483,7 +483,7 @@ to the alias initialization in `.bashrc`, `.bash_profile` or `.zshrc`.
 For example:
 
 ```bash
-eval $(thefuck --alias --enable-experimental-instant-mode)
+eval $(thefeck --alias --enable-experimental-instant-mode)
 ```
 
 ## Developing
@@ -494,16 +494,16 @@ See [CONTRIBUTING.md](CONTRIBUTING.md)
 Project License can be found [here](LICENSE.md).
 
 
-[version-badge]:   https://img.shields.io/pypi/v/thefuck.svg?label=version
-[version-link]:    https://pypi.python.org/pypi/thefuck/
-[travis-badge]:    https://travis-ci.org/nvbn/thefuck.svg?branch=master
-[travis-link]:     https://travis-ci.org/nvbn/thefuck
+[version-badge]:   https://img.shields.io/pypi/v/thefeck.svg?label=version
+[version-link]:    https://pypi.python.org/pypi/thefeck/
+[travis-badge]:    https://travis-ci.org/nvbn/thefeck.svg?branch=master
+[travis-link]:     https://travis-ci.org/nvbn/thefeck
 [appveyor-badge]:  https://ci.appveyor.com/api/projects/status/1sskj4imj02um0gu/branch/master?svg=true
-[appveyor-link]:   https://ci.appveyor.com/project/nvbn/thefuck
-[coverage-badge]:  https://img.shields.io/coveralls/nvbn/thefuck.svg
-[coverage-link]:   https://coveralls.io/github/nvbn/thefuck
+[appveyor-link]:   https://ci.appveyor.com/project/nvbn/thefeck
+[coverage-badge]:  https://img.shields.io/coveralls/nvbn/thefeck.svg
+[coverage-link]:   https://coveralls.io/github/nvbn/thefeck
 [license-badge]:   https://img.shields.io/badge/license-MIT-007EC7.svg
-[examples-link]:   https://raw.githubusercontent.com/nvbn/thefuck/master/example.gif
-[instant-mode-gif-link]:   https://raw.githubusercontent.com/nvbn/thefuck/master/example_instant_mode.gif
+[examples-link]:   https://raw.githubusercontent.com/nvbn/thefeck/master/example.gif
+[instant-mode-gif-link]:   https://raw.githubusercontent.com/nvbn/thefeck/master/example_instant_mode.gif
 [homebrew]:        https://brew.sh/
 [linuxbrew]:       https://linuxbrew.sh/

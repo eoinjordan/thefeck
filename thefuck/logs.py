@@ -91,7 +91,7 @@ def debug_time(msg):
 
 
 def how_to_configure_alias(configuration_details):
-    print(u"Seems like {bold}fuck{reset} alias isn't configured!".format(
+    print(u"Seems like {bold}feck{reset} alias isn't configured!".format(
         bold=color(colorama.Style.BRIGHT),
         reset=color(colorama.Style.RESET_ALL)))
 
@@ -106,17 +106,17 @@ def how_to_configure_alias(configuration_details):
 
         if configuration_details.can_configure_automatically:
             print(
-                u"Or run {bold}fuck{reset} second time for configuring"
+                u"Or run {bold}feck{reset} second time for configuring"
                 u" it automatically.".format(
                     bold=color(colorama.Style.BRIGHT),
                     reset=color(colorama.Style.RESET_ALL)))
 
-    print(u'More details - https://github.com/nvbn/thefuck#manual-installation')
+    print(u'More details - https://github.com/nvbn/thefeck#manual-installation')
 
 
 def already_configured(configuration_details):
     print(
-        u"Seems like {bold}fuck{reset} alias already configured!\n"
+        u"Seems like {bold}feck{reset} alias already configured!\n"
         u"For applying changes run {bold}{reload}{reset}"
         u" or restart your shell.".format(
             bold=color(colorama.Style.BRIGHT),
@@ -126,7 +126,7 @@ def already_configured(configuration_details):
 
 def configured_successfully(configuration_details):
     print(
-        u"{bold}fuck{reset} alias configured successfully!\n"
+        u"{bold}feck{reset} alias configured successfully!\n"
         u"For applying changes run {bold}{reload}{reset}"
         u" or restart your shell.".format(
             bold=color(colorama.Style.BRIGHT),
@@ -134,8 +134,8 @@ def configured_successfully(configuration_details):
             reload=configuration_details.reload))
 
 
-def version(thefuck_version, python_version, shell_info):
+def version(thefeck_version, python_version, shell_info):
     sys.stderr.write(
-        u'The Fuck {} using Python {} and {}\n'.format(thefuck_version,
+        u'The Fuck {} using Python {} and {}\n'.format(thefeck_version,
                                                        python_version,
                                                        shell_info))

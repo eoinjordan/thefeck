@@ -1,6 +1,6 @@
 import pytest
-from thefuck.rules.git_commit_reset import match, get_new_command
-from thefuck.types import Command
+from thefeck.rules.git_commit_reset import match, get_new_command
+from thefeck.types import Command
 
 
 @pytest.mark.parametrize('script, output', [
@@ -11,7 +11,7 @@ def test_match(output, script):
 
 
 @pytest.mark.parametrize('script', [
-    'git branch foo',
+    'git branch bar',
     'git checkout feature/test_commit',
     'git push'])
 def test_not_match(script):

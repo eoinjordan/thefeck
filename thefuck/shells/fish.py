@@ -51,17 +51,17 @@ class Fish(Generic):
     def app_alias(self, alias_name):
         if settings.alter_history:
             alter_history = ('    builtin history delete --exact'
-                             ' --case-sensitive -- $fucked_up_command\n'
+                             ' --case-sensitive -- $fecked_up_command\n'
                              '    builtin history merge ^ /dev/null\n')
         else:
             alter_history = ''
         # It is VERY important to have the variables declared WITHIN the alias
         return ('function {0} -d "Correct your previous console command"\n'
-                '  set -l fucked_up_command $history[1]\n'
+                '  set -l fecked_up_command $history[1]\n'
                 '  env TF_SHELL=fish TF_ALIAS={0} PYTHONIOENCODING=utf-8'
-                ' thefuck $fucked_up_command {2} $argv | read -l unfucked_command\n'
-                '  if [ "$unfucked_command" != "" ]\n'
-                '    eval $unfucked_command\n{1}'
+                ' thefeck $fecked_up_command {2} $argv | read -l unfecked_command\n'
+                '  if [ "$unfecked_command" != "" ]\n'
+                '    eval $unfecked_command\n{1}'
                 '  end\n'
                 'end').format(alias_name, alter_history, ARGUMENT_PLACEHOLDER)
 
@@ -102,7 +102,7 @@ class Fish(Generic):
 
     def how_to_configure(self):
         return self._create_shell_configuration(
-            content=u"thefuck --alias | source",
+            content=u"thefeck --alias | source",
             path='~/.config/fish/config.fish',
             reload='fish')
 

@@ -1,20 +1,20 @@
 import pytest
-from thefuck.rules.cd_correction import match
-from thefuck.types import Command
+from thefeck.rules.cd_correction import match
+from thefeck.types import Command
 
 
 @pytest.mark.parametrize('command', [
-    Command('cd foo', 'cd: foo: No such file or directory'),
-    Command('cd foo/bar/baz',
-            'cd: foo: No such file or directory'),
-    Command('cd foo/bar/baz', 'cd: can\'t cd to foo/bar/baz'),
-    Command('cd /foo/bar/', 'cd: The directory "/foo/bar/" does not exist')])
+    Command('cd bar', 'cd: bar: No such file or directory'),
+    Command('cd bar/bar/baz',
+            'cd: bar: No such file or directory'),
+    Command('cd bar/bar/baz', 'cd: can\'t cd to bar/bar/baz'),
+    Command('cd /bar/bar/', 'cd: The directory "/bar/bar/" does not exist')])
 def test_match(command):
     assert match(command)
 
 
 @pytest.mark.parametrize('command', [
-    Command('cd foo', ''), Command('', '')])
+    Command('cd bar', ''), Command('', '')])
 def test_not_match(command):
     assert not match(command)
 

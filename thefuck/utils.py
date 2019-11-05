@@ -106,7 +106,7 @@ def get_close_matches(word, possibilities, n=None, cutoff=0.6):
 
 @memoize
 def get_all_executables():
-    from thefuck.shells import shell
+    from thefeck.shells import shell
 
     def _safe(fn, fallback):
         try:
@@ -115,7 +115,7 @@ def get_all_executables():
             return fallback
 
     tf_alias = get_alias()
-    tf_entry_points = ['thefuck', 'fuck']
+    tf_entry_points = ['thefeck', 'feck']
 
     bins = [exe.name.decode('utf8') if six.PY2 else exe.name
             for path in os.environ.get('PATH', '').split(os.pathsep)
@@ -206,7 +206,7 @@ class Cache(object):
 
     def _setup_db(self):
         cache_dir = self._get_cache_dir()
-        cache_path = Path(cache_dir).joinpath('thefuck').as_posix()
+        cache_path = Path(cache_dir).joinpath('thefeck').as_posix()
 
         try:
             self._db = shelve.open(cache_path)
@@ -292,17 +292,17 @@ cache.disabled = False
 def get_installation_info():
     import pkg_resources
 
-    return pkg_resources.require('thefuck')[0]
+    return pkg_resources.require('thefeck')[0]
 
 
 def get_alias():
-    return os.environ.get('TF_ALIAS', 'fuck')
+    return os.environ.get('TF_ALIAS', 'feck')
 
 
 @memoize
 def get_valid_history_without_current(command):
     def _not_corrected(history, tf_alias):
-        """Returns all lines from history except that comes before `fuck`."""
+        """Returns all lines from history except that comes before `feck`."""
         previous = None
         for line in history:
             if previous is not None and line != tf_alias:
@@ -311,7 +311,7 @@ def get_valid_history_without_current(command):
         if history:
             yield history[-1]
 
-    from thefuck.shells import shell
+    from thefeck.shells import shell
     history = shell.get_history()
     tf_alias = get_alias()
     executables = set(get_all_executables())\

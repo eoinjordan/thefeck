@@ -7,7 +7,7 @@ from .. import utils
 def get_pkgfile(command):
     """ Gets the packages that provide the given command using `pkgfile`.
 
-    If the command is of the form `sudo foo`, searches for the `foo` command
+    If the command is of the form `sudo bar`, searches for the `bar` command
     instead.
     """
     try:

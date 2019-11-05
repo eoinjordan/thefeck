@@ -1,6 +1,6 @@
-name: thefuck
+name: thefeck
 version: stable
-version-script: git -C parts/thefuck/build describe --abbrev=0 --tags
+version-script: git -C parts/thefeck/build describe --abbrev=0 --tags
 summary: Magnificent app which corrects your previous console command.
 description: |
   The Fuck tries to match a rule for the previous command,
@@ -10,16 +10,16 @@ grade: stable
 confinement: classic
 
 apps:
-  thefuck:
-    command: bin/thefuck
+  thefeck:
+    command: bin/thefeck
     environment:
         PYTHONIOENCODING: utf-8
-  fuck:
-    command: bin/fuck
+  feck:
+    command: bin/feck
     environment:
         PYTHONIOENCODING: utf-8
 
 parts:
-  thefuck:
-    source: https://github.com/nvbn/thefuck.git
+  thefeck:
+    source: https://github.com/nvbn/thefeck.git
     plugin: python

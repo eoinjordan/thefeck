@@ -1,5 +1,5 @@
 import os
-from thefuck.utils import for_app
+from thefeck.utils import for_app
 
 
 def _get_actual_file(parts):

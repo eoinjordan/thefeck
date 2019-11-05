@@ -4,13 +4,13 @@ from tests.functional.plots import with_confirmation, without_confirmation, \
     select_command_with_arrows, how_to_configure
 
 
-python_3 = ('thefuck/python3-zsh',
+python_3 = ('thefeck/python3-zsh',
             u'''FROM python:3
                 RUN apt-get update
                 RUN apt-get install -yy zsh''',
             u'sh')
 
-python_2 = ('thefuck/python2-zsh',
+python_2 = ('thefeck/python2-zsh',
             u'''FROM python:2
                 RUN apt-get update
                 RUN apt-get install -yy zsh''',
@@ -23,7 +23,7 @@ export HISTFILE=~/.zsh_history
 echo > $HISTFILE
 export SAVEHIST=100
 export HISTSIZE=100
-eval $(thefuck --alias {})
+eval $(thefeck --alias {})
 setopt INC_APPEND_HISTORY
 echo "instant mode ready: $THEFUCK_INSTANT_MODE"
 ' > ~/.zshrc'''
@@ -71,5 +71,5 @@ def test_without_confirmation(proc, TIMEOUT):
 
 @pytest.mark.functional
 def test_how_to_configure_alias(proc, TIMEOUT):
-    proc.sendline(u'unfunction fuck')
+    proc.sendline(u'unfunction feck')
     how_to_configure(proc, TIMEOUT)

@@ -1,5 +1,5 @@
-from thefuck.utils import for_app
-from thefuck.shells import shell
+from thefeck.utils import for_app
+from thefeck.shells import shell
 
 
 @for_app('docker')

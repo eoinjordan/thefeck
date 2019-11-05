@@ -1,6 +1,6 @@
 
-from thefuck.rules.sl_ls import match, get_new_command
-from thefuck.types import Command
+from thefeck.rules.sl_ls import match, get_new_command
+from thefeck.types import Command
 
 
 def test_match():

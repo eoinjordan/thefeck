@@ -1,4 +1,4 @@
-from thefuck.specific.git import git_support
+from thefeck.specific.git import git_support
 
 
 @git_support

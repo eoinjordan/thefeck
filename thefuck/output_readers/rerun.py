@@ -8,7 +8,7 @@ from ..conf import settings
 
 def _kill_process(proc):
     """Tries to kill the process otherwise just logs a debug message, the
-    process will be killed when thefuck terminates.
+    process will be killed when thefeck terminates.
 
     :type proc: Process
 

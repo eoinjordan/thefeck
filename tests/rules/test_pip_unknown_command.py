@@ -1,6 +1,6 @@
 import pytest
-from thefuck.rules.pip_unknown_command import match, get_new_command
-from thefuck.types import Command
+from thefeck.rules.pip_unknown_command import match, get_new_command
+from thefeck.types import Command
 
 
 @pytest.fixture

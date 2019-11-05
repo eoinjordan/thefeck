@@ -4,7 +4,7 @@ This usually happens when commands are copied from documentations
 including them in their code blocks.
 
 Example:
-> $ git clone https://github.com/nvbn/thefuck.git
+> $ git clone https://github.com/nvbn/thefeck.git
 bash: $: command not found...
 """
 

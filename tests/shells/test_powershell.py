@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import pytest
-from thefuck.shells import Powershell
+from thefeck.shells import Powershell
 
 
 @pytest.mark.usefixtures('isfile', 'no_memoize', 'no_cache')
@@ -12,16 +12,16 @@ class TestPowershell(object):
 
     @pytest.fixture(autouse=True)
     def Popen(self, mocker):
-        mock = mocker.patch('thefuck.shells.powershell.Popen')
+        mock = mocker.patch('thefeck.shells.powershell.Popen')
         return mock
 
     def test_and_(self, shell):
         assert shell.and_('ls', 'cd') == '(ls) -and (cd)'
 
     def test_app_alias(self, shell):
-        assert 'function fuck' in shell.app_alias('fuck')
+        assert 'function feck' in shell.app_alias('feck')
         assert 'function FUCK' in shell.app_alias('FUCK')
-        assert 'thefuck' in shell.app_alias('fuck')
+        assert 'thefeck' in shell.app_alias('feck')
 
     def test_how_to_configure(self, shell):
         assert not shell.how_to_configure().can_configure_automatically

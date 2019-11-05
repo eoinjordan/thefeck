@@ -1,9 +1,9 @@
 import os
 import pytest
 import tarfile
-from thefuck.rules.dirty_untar import match, get_new_command, side_effect, \
+from thefeck.rules.dirty_untar import match, get_new_command, side_effect, \
                                       tar_extensions  # noqa: E126
-from thefuck.types import Command
+from thefeck.types import Command
 
 
 @pytest.fixture
@@ -38,8 +38,8 @@ parametrize_extensions = pytest.mark.parametrize('ext', tar_extensions)
 
 # (filename as typed by the user, unquoted filename, quoted filename as per shells.quote)
 parametrize_filename = pytest.mark.parametrize('filename, unquoted, quoted', [
-    ('foo{}', 'foo{}', 'foo{}'),
-    ('"foo bar{}"', 'foo bar{}', "'foo bar{}'")])
+    ('bar{}', 'bar{}', 'bar{}'),
+    ('"bar bar{}"', 'bar bar{}', "'bar bar{}'")])
 
 parametrize_script = pytest.mark.parametrize('script, fixed', [
     ('tar xvf {}', 'mkdir -p {dir} && tar xvf {filename} -C {dir}'),

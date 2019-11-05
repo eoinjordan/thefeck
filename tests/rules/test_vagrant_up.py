@@ -1,6 +1,6 @@
 import pytest
-from thefuck.rules.vagrant_up import match, get_new_command
-from thefuck.types import Command
+from thefeck.rules.vagrant_up import match, get_new_command
+from thefeck.types import Command
 
 
 @pytest.mark.parametrize('command', [

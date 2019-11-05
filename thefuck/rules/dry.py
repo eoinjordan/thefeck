@@ -11,5 +11,5 @@ def get_new_command(command):
 
 
 # it should be rare enough to actually have to type twice the same word, so
-# this rule can have a higher priority to come before things like "cd cd foo"
+# this rule can have a higher priority to come before things like "cd cd bar"
 priority = 900

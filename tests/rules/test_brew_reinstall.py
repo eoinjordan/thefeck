@@ -1,26 +1,26 @@
 import pytest
-from thefuck.types import Command
-from thefuck.rules.brew_reinstall import get_new_command, match
+from thefeck.types import Command
+from thefeck.rules.brew_reinstall import get_new_command, match
 
 
-output = ("Warning: thefuck 9.9 is already installed and up-to-date\nTo "
-          "reinstall 9.9, run `brew reinstall thefuck`")
+output = ("Warning: thefeck 9.9 is already installed and up-to-date\nTo "
+          "reinstall 9.9, run `brew reinstall thefeck`")
 
 
 def test_match():
-    command = Command('brew install thefuck', output)
+    command = Command('brew install thefeck', output)
     assert match(command)
 
 
 @pytest.mark.parametrize('script', [
-    'brew reinstall thefuck',
-    'brew install foo'])
+    'brew reinstall thefeck',
+    'brew install bar'])
 def test_not_match(script):
     assert not match(Command(script, ''))
 
 
 @pytest.mark.parametrize('script, formula, ', [
-    ('brew install foo', 'foo'),
+    ('brew install bar', 'bar'),
     ('brew install bar zap', 'bar zap')])
 def test_get_new_command(script, formula):
     command = Command(script, output)

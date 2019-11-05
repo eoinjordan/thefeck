@@ -1,6 +1,6 @@
 import pytest
-from thefuck.rules.adb_unknown_command import match, get_new_command
-from thefuck.types import Command
+from thefeck.rules.adb_unknown_command import match, get_new_command
+from thefeck.types import Command
 
 
 @pytest.fixture
@@ -25,7 +25,7 @@ def test_match(output, script):
 
 
 @pytest.mark.parametrize('script', [
-    'git branch foo',
+    'git branch bar',
     'abd push'])
 def test_not_match(script):
     assert not match(Command(script, ''))

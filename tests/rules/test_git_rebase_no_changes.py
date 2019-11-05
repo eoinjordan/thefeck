@@ -1,6 +1,6 @@
 import pytest
-from thefuck.rules.git_rebase_no_changes import match, get_new_command
-from thefuck.types import Command
+from thefeck.rules.git_rebase_no_changes import match, get_new_command
+from thefeck.types import Command
 
 
 @pytest.fixture

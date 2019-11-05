@@ -1,6 +1,6 @@
 import pytest
-from thefuck.rules.grep_arguments_order import get_new_command, match
-from thefuck.types import Command
+from thefeck.rules.grep_arguments_order import get_new_command, match
+from thefeck.types import Command
 
 output = 'grep: {}: No such file or directory'.format
 

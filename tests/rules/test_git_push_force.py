@@ -1,10 +1,10 @@
 import pytest
-from thefuck.rules.git_push_force import match, get_new_command
-from thefuck.types import Command
+from thefeck.rules.git_push_force import match, get_new_command
+from thefeck.types import Command
 
 
 git_err = '''
-To /tmp/foo
+To /tmp/bar
  ! [rejected]        master -> master (non-fast-forward)
  error: failed to push some refs to '/tmp/bar'
  hint: Updates were rejected because the tip of your current branch is behind

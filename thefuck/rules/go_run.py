@@ -1,8 +1,8 @@
-from thefuck.utils import for_app
+from thefeck.utils import for_app
 # Appends .go when compiling go files
 #
 # Example:
-# > go run foo
+# > go run bar
 # error: go run: no go files listed
 
 

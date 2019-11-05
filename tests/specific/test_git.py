@@ -1,6 +1,6 @@
 import pytest
-from thefuck.specific.git import git_support
-from thefuck.types import Command
+from thefeck.specific.git import git_support
+from thefeck.types import Command
 
 
 @pytest.mark.parametrize('called, command, output', [
@@ -18,8 +18,8 @@ def test_git_support(called, command, output):
 @pytest.mark.parametrize('command, is_git', [
     ('git pull', True),
     ('hub pull', True),
-    ('git push --set-upstream origin foo', True),
-    ('hub push --set-upstream origin foo', True),
+    ('git push --set-upstream origin bar', True),
+    ('hub push --set-upstream origin bar', True),
     ('ls', False),
     ('cat git', False),
     ('cat hub', False)])

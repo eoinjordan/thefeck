@@ -1,6 +1,6 @@
 import pytest
-from thefuck.rules.git_branch_exists import match, get_new_command
-from thefuck.types import Command
+from thefeck.rules.git_branch_exists import match, get_new_command
+from thefeck.types import Command
 
 
 @pytest.fixture
@@ -18,7 +18,7 @@ def new_command(branch_name):
 
 
 @pytest.mark.parametrize('script, src_branch_name, branch_name', [
-    ('git branch foo', 'foo', 'foo'),
+    ('git branch bar', 'bar', 'bar'),
     ('git checkout bar', 'bar', 'bar'),
     ('git checkout -b "let\'s-push-this"', '"let\'s-push-this"', '"let\'s-push-this"')])
 def test_match(output, script, branch_name):
@@ -26,7 +26,7 @@ def test_match(output, script, branch_name):
 
 
 @pytest.mark.parametrize('script', [
-    'git branch foo',
+    'git branch bar',
     'git checkout bar',
     'git checkout -b "let\'s-push-this"'])
 def test_not_match(script):
@@ -34,7 +34,7 @@ def test_not_match(script):
 
 
 @pytest.mark.parametrize('script, src_branch_name, branch_name', [
-    ('git branch foo', 'foo', 'foo'),
+    ('git branch bar', 'bar', 'bar'),
     ('git checkout bar', 'bar', 'bar'),
     ('git checkout -b "let\'s-push-this"', "let's-push-this", "let\\'s-push-this")])
 def test_get_new_command(output, new_command, script, src_branch_name, branch_name):

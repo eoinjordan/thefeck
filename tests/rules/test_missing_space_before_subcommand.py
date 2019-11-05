@@ -1,13 +1,13 @@
 import pytest
-from thefuck.rules.missing_space_before_subcommand import (
+from thefeck.rules.missing_space_before_subcommand import (
     match, get_new_command)
-from thefuck.types import Command
+from thefeck.types import Command
 
 
 @pytest.fixture(autouse=True)
 def all_executables(mocker):
     return mocker.patch(
-        'thefuck.rules.missing_space_before_subcommand.get_all_executables',
+        'thefeck.rules.missing_space_before_subcommand.get_all_executables',
         return_value=['git', 'ls', 'npm'])
 
 

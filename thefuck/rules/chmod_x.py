@@ -1,5 +1,5 @@
 import os
-from thefuck.shells import shell
+from thefeck.shells import shell
 
 
 def match(command):

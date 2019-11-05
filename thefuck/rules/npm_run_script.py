@@ -1,5 +1,5 @@
-from thefuck.specific.npm import npm_available, get_scripts
-from thefuck.utils import for_app
+from thefeck.specific.npm import npm_available, get_scripts
+from thefeck.utils import for_app
 
 enabled_by_default = npm_available
 

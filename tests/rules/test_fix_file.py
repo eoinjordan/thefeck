@@ -2,8 +2,8 @@
 
 import pytest
 import os
-from thefuck.rules.fix_file import match, get_new_command
-from thefuck.types import Command
+from thefeck.rules.fix_file import match, get_new_command
+from thefeck.types import Command
 
 
 # (script, file, line, col (or None), output)
@@ -36,17 +36,17 @@ Search pattern not terminated at a.pl line 2.
 
 ('sh a.sh', 'a.sh', 2, None,
 """
-a.sh: line 2: foo: command not found
+a.sh: line 2: bar: command not found
 """),
 
 ('zsh a.sh', 'a.sh', 2, None,
 """
-a.sh:2: command not found: foo
+a.sh:2: command not found: bar
 """),
 
 ('bash a.sh', 'a.sh', 2, None,
 """
-a.sh: line 2: foo: command not found
+a.sh: line 2: bar: command not found
 """),
 
 ('rustc a.rs', 'a.rs', 2, 5,
@@ -79,7 +79,7 @@ SyntaxError: invalid syntax
 """
 Traceback (most recent call last):
   File "a.py", line 8, in <module>
-    match("foo")
+    match("bar")
   File "a.py", line 5, in match
     m = re.search(None, command)
   File "/usr/lib/python3.4/re.py", line 170, in search
@@ -93,7 +93,7 @@ TypeError: first argument must be string or compiled pattern
 u"""
 Traceback (most recent call last):
   File "café.py", line 8, in <module>
-    match("foo")
+    match("bar")
   File "café.py", line 5, in match
     m = re.search(None, command)
   File "/usr/lib/python3.4/re.py", line 170, in search
@@ -115,8 +115,8 @@ lua: a.lua:2: unexpected symbol near '+'
 
 ('fish a.sh', '/tmp/fix-error/a.sh', 2, None,
 """
-fish: Unknown command 'foo'
-/tmp/fix-error/a.sh (line 2): foo
+fish: Unknown command 'bar'
+/tmp/fix-error/a.sh (line 2): bar
                               ^
 """),
 
@@ -152,15 +152,15 @@ make: *** [target] Error 127
 fatal: bad config file line 1 in /home/martin/.config/git/config
 """),
 
-('node fuck.js asdf qwer', '/Users/pablo/Workspace/barebones/fuck.js', '2', 5,
+('node feck.js asdf qwer', '/Users/pablo/Workspace/barebones/feck.js', '2', 5,
 """
-/Users/pablo/Workspace/barebones/fuck.js:2
+/Users/pablo/Workspace/barebones/feck.js:2
 conole.log(arg);  // this should read console.log(arg);
 ^
 ReferenceError: conole is not defined
-    at /Users/pablo/Workspace/barebones/fuck.js:2:5
+    at /Users/pablo/Workspace/barebones/feck.js:2:5
     at Array.forEach (native)
-    at Object.<anonymous> (/Users/pablo/Workspace/barebones/fuck.js:1:85)
+    at Object.<anonymous> (/Users/pablo/Workspace/barebones/feck.js:1:85)
     at Module._compile (module.js:460:26)
     at Object.Module._extensions..js (module.js:478:10)
     at Module.load (module.js:355:32)
@@ -178,10 +178,10 @@ ReferenceError: conole is not defined
 ./tests/rules/test_whois.py:22:80: E501 line too long (83 > 79 characters)
 """),
 
-('py.test', '/home/thefuck/tests/rules/test_fix_file.py', 218, None,
+('py.test', '/home/thefeck/tests/rules/test_fix_file.py', 218, None,
 """
 monkeypatch = <_pytest.monkeypatch.monkeypatch object at 0x7fdb76a25b38>
-test = ('fish a.sh', '/tmp/fix-error/a.sh', 2, None, '', "\\nfish: Unknown command 'foo'\\n/tmp/fix-error/a.sh (line 2): foo\\n                              ^\\n")
+test = ('fish a.sh', '/tmp/fix-error/a.sh', 2, None, '', "\\nfish: Unknown command 'bar'\\n/tmp/fix-error/a.sh (line 2): bar\\n                              ^\\n")
 
     @pytest.mark.parametrize('test', tests)
     @pytest.mark.usefixtures('no_memoize')
@@ -189,7 +189,7 @@ test = ('fish a.sh', '/tmp/fix-error/a.sh', 2, None, '', "\\nfish: Unknown comma
 >       mocker.patch('os.path.isfile', return_value=True)
 E       NameError: name 'mocker' is not defined
 
-/home/thefuck/tests/rules/test_fix_file.py:218: NameError
+/home/thefeck/tests/rules/test_fix_file.py:218: NameError
 """),
 )  # noqa
 

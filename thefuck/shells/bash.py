@@ -22,7 +22,7 @@ class Bash(Generic):
                 export TF_HISTORY=$(fc -ln -10);
                 export PYTHONIOENCODING=utf-8;
                 TF_CMD=$(
-                    thefuck {argument_placeholder} "$@"
+                    thefeck {argument_placeholder} "$@"
                 ) && eval "$TF_CMD";
                 unset TF_HISTORY;
                 export PYTHONIOENCODING=$TF_PYTHONIOENCODING;
@@ -44,11 +44,11 @@ class Bash(Generic):
                        app_alias=self.app_alias(alias_name))
         else:
             log_path = os.path.join(
-                gettempdir(), 'thefuck-script-log-{}'.format(uuid4().hex))
+                gettempdir(), 'thefeck-script-log-{}'.format(uuid4().hex))
             return '''
                 export THEFUCK_INSTANT_MODE=True;
                 export THEFUCK_OUTPUT_LOG={log};
-                thefuck --shell-logger {log};
+                thefeck --shell-logger {log};
                 rm {log};
                 exit
             '''.format(log=log_path)
@@ -81,7 +81,7 @@ class Bash(Generic):
             config = 'bash config'
 
         return self._create_shell_configuration(
-            content=u'eval "$(thefuck --alias)"',
+            content=u'eval "$(thefeck --alias)"',
             path=config,
             reload=u'source {}'.format(config))
 

@@ -1,7 +1,7 @@
 import os
 import re
-from thefuck.utils import get_closest, replace_command
-from thefuck.specific.brew import get_brew_path_prefix, brew_available
+from thefeck.utils import get_closest, replace_command
+from thefeck.specific.brew import get_brew_path_prefix, brew_available
 
 BREW_CMD_PATH = '/Library/Homebrew/cmd'
 TAP_PATH = '/Library/Taps'

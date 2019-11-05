@@ -1,6 +1,6 @@
 import pytest
-from thefuck.rules.cp_omitting_directory import match, get_new_command
-from thefuck.types import Command
+from thefeck.rules.cp_omitting_directory import match, get_new_command
+from thefeck.types import Command
 
 
 @pytest.mark.parametrize('script, output', [

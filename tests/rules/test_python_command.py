@@ -1,5 +1,5 @@
-from thefuck.rules.python_command import match, get_new_command
-from thefuck.types import Command
+from thefeck.rules.python_command import match, get_new_command
+from thefeck.types import Command
 
 
 def test_match():

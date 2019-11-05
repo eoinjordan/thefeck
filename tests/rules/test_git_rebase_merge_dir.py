@@ -1,6 +1,6 @@
 import pytest
-from thefuck.rules.git_rebase_merge_dir import match, get_new_command
-from thefuck.types import Command
+from thefeck.rules.git_rebase_merge_dir import match, get_new_command
+from thefeck.types import Command
 
 
 @pytest.fixture
@@ -10,7 +10,7 @@ def output():
             'case, please try\n'
             '\tgit rebase (--continue | --abort | --skip)\n'
             'If that is not the case, please\n'
-            '\trm -fr "/foo/bar/baz/egg/.git/rebase-merge"\n'
+            '\trm -fr "/bar/bar/baz/egg/.git/rebase-merge"\n'
             'and run me again.  I am stopping in case you still have something\n'
             'valuable there.\n')
 
@@ -31,12 +31,12 @@ def test_not_match(script):
 @pytest.mark.parametrize('script, result', [
     ('git rebase master', [
         'git rebase --abort', 'git rebase --skip', 'git rebase --continue',
-        'rm -fr "/foo/bar/baz/egg/.git/rebase-merge"']),
+        'rm -fr "/bar/bar/baz/egg/.git/rebase-merge"']),
     ('git rebase -skip', [
         'git rebase --skip', 'git rebase --abort', 'git rebase --continue',
-        'rm -fr "/foo/bar/baz/egg/.git/rebase-merge"']),
+        'rm -fr "/bar/bar/baz/egg/.git/rebase-merge"']),
     ('git rebase', [
         'git rebase --skip', 'git rebase --abort', 'git rebase --continue',
-        'rm -fr "/foo/bar/baz/egg/.git/rebase-merge"'])])
+        'rm -fr "/bar/bar/baz/egg/.git/rebase-merge"'])])
 def test_get_new_command(output, script, result):
     assert get_new_command(Command(script, output)) == result

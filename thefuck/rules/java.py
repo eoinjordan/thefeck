@@ -1,11 +1,11 @@
 """Fixes common java command mistake
 
 Example:
-> java foo.java
-Error: Could not find or load main class foo.java
+> java bar.java
+Error: Could not find or load main class bar.java
 
 """
-from thefuck.utils import for_app
+from thefeck.utils import for_app
 
 
 @for_app('java')

@@ -1,6 +1,6 @@
 import re
-from thefuck.specific.sudo import sudo_support
-from thefuck.utils import for_app
+from thefeck.specific.sudo import sudo_support
+from thefeck.utils import for_app
 
 
 @sudo_support

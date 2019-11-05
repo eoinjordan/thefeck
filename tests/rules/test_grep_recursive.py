@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from thefuck.rules.grep_recursive import match, get_new_command
-from thefuck.types import Command
+from thefeck.rules.grep_recursive import match, get_new_command
+from thefeck.types import Command
 
 
 def test_match():

@@ -1,28 +1,28 @@
 import pytest
-from thefuck.rules.git_branch_delete_checked_out import match, get_new_command
-from thefuck.types import Command
+from thefeck.rules.git_branch_delete_checked_out import match, get_new_command
+from thefeck.types import Command
 
 
 @pytest.fixture
 def output():
-    return "error: Cannot delete branch 'foo' checked out at '/bar/foo'"
+    return "error: Cannot delete branch 'bar' checked out at '/bar/bar'"
 
 
-@pytest.mark.parametrize("script", ["git branch -d foo", "git branch -D foo"])
+@pytest.mark.parametrize("script", ["git branch -d bar", "git branch -D bar"])
 def test_match(script, output):
     assert match(Command(script, output))
 
 
-@pytest.mark.parametrize("script", ["git branch -d foo", "git branch -D foo"])
+@pytest.mark.parametrize("script", ["git branch -d bar", "git branch -D bar"])
 def test_not_match(script):
-    assert not match(Command(script, "Deleted branch foo (was a1b2c3d)."))
+    assert not match(Command(script, "Deleted branch bar (was a1b2c3d)."))
 
 
 @pytest.mark.parametrize(
     "script, new_command",
     [
-        ("git branch -d foo", "git checkout master && git branch -D foo"),
-        ("git branch -D foo", "git checkout master && git branch -D foo"),
+        ("git branch -d bar", "git checkout master && git branch -D bar"),
+        ("git branch -D bar", "git checkout master && git branch -D bar"),
     ],
 )
 def test_get_new_command(script, new_command, output):

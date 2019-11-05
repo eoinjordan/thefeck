@@ -1,6 +1,6 @@
 import pytest
-from thefuck.rules.git_push_different_branch_names import get_new_command, match
-from thefuck.types import Command
+from thefeck.rules.git_push_different_branch_names import get_new_command, match
+from thefeck.types import Command
 
 
 output = """fatal: The upstream branch of your current branch does not match
@@ -22,12 +22,12 @@ def error_msg(localbranch, remotebranch):
 
 
 def test_match():
-    assert match(Command('git push', error_msg('foo', 'bar')))
+    assert match(Command('git push', error_msg('bar', 'bar')))
 
 
 @pytest.mark.parametrize('command', [
     Command('vim', ''),
-    Command('git status', error_msg('foo', 'bar')),
+    Command('git status', error_msg('bar', 'bar')),
     Command('git push', '')
 ])
 def test_not_match(command):
@@ -35,5 +35,5 @@ def test_not_match(command):
 
 
 def test_get_new_command():
-    new_command = get_new_command(Command('git push', error_msg('foo', 'bar')))
+    new_command = get_new_command(Command('git push', error_msg('bar', 'bar')))
     assert new_command == 'git push origin HEAD:bar'

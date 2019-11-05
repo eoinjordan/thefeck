@@ -1,5 +1,5 @@
 import re
-from thefuck.utils import for_app, which, replace_argument
+from thefeck.utils import for_app, which, replace_argument
 
 
 def _get_command_name(command):

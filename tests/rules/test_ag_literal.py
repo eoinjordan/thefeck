@@ -1,6 +1,6 @@
 import pytest
-from thefuck.rules.ag_literal import get_new_command, match
-from thefuck.types import Command
+from thefeck.rules.ag_literal import get_new_command, match
+from thefeck.types import Command
 
 
 @pytest.fixture
@@ -14,7 +14,7 @@ def test_match(script, output):
     assert match(Command(script, output))
 
 
-@pytest.mark.parametrize('script', ['ag foo'])
+@pytest.mark.parametrize('script', ['ag bar'])
 def test_not_match(script):
     assert not match(Command(script, ''))
 

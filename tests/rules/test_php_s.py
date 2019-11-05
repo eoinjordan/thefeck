@@ -1,6 +1,6 @@
 import pytest
-from thefuck.rules.php_s import get_new_command, match
-from thefuck.types import Command
+from thefeck.rules.php_s import get_new_command, match
+from thefeck.types import Command
 
 
 @pytest.mark.parametrize('command', [

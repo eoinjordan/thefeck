@@ -1,6 +1,6 @@
 import pytest
-from thefuck.rules.quotation_marks import match, get_new_command
-from thefuck.types import Command
+from thefeck.rules.quotation_marks import match, get_new_command
+from thefeck.types import Command
 
 
 @pytest.mark.parametrize('command', [

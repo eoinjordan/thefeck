@@ -1,12 +1,12 @@
 """Appends .java when compiling java files
 
 Example:
- > javac foo
- error: Class names, 'foo', are only accepted if annotation
+ > javac bar
+ error: Class names, 'bar', are only accepted if annotation
  processing is explicitly requested
 
 """
-from thefuck.utils import for_app
+from thefeck.utils import for_app
 
 
 @for_app('javac')

@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
 import pytest
-from thefuck.rules.apt_list_upgradable import get_new_command, match
-from thefuck.types import Command
+from thefeck.rules.apt_list_upgradable import get_new_command, match
+from thefeck.types import Command
 
 full_english_output = '''
 Hit:1 http://us.archive.ubuntu.com/ubuntu zesty InRelease
@@ -61,11 +61,11 @@ def test_match(output):
 
 
 @pytest.mark.parametrize('command', [
-    Command('apt-cache search foo', ''),
-    Command('aptitude search foo', ''),
-    Command('apt search foo', ''),
-    Command('apt-get install foo', ''),
-    Command('apt-get source foo', ''),
+    Command('apt-cache search bar', ''),
+    Command('aptitude search bar', ''),
+    Command('apt search bar', ''),
+    Command('apt-get install bar', ''),
+    Command('apt-get source bar', ''),
     Command('apt-get clean', ''),
     Command('apt-get remove', ''),
     Command('apt-get update', ''),

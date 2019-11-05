@@ -1,7 +1,7 @@
 import pytest
-from thefuck.rules.brew_install import match, get_new_command
-from thefuck.rules.brew_install import _get_formulas
-from thefuck.types import Command
+from thefeck.rules.brew_install import match, get_new_command
+from thefeck.rules.brew_install import _get_formulas
+from thefeck.types import Command
 
 
 @pytest.fixture

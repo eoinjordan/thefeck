@@ -1,6 +1,6 @@
 import pytest
-from thefuck.rules.git_merge_unrelated import match, get_new_command
-from thefuck.types import Command
+from thefeck.rules.git_merge_unrelated import match, get_new_command
+from thefeck.types import Command
 
 
 output = 'fatal: refusing to merge unrelated histories'

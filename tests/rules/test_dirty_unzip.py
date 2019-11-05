@@ -3,8 +3,8 @@
 import os
 import pytest
 import zipfile
-from thefuck.rules.dirty_unzip import match, get_new_command, side_effect
-from thefuck.types import Command
+from thefeck.rules.dirty_unzip import match, get_new_command, side_effect
+from thefeck.types import Command
 from unicodedata import normalize
 
 
@@ -38,8 +38,8 @@ def zip_error(tmpdir):
 @pytest.mark.parametrize('script,filename', [
     (u'unzip café', u'café.zip'),
     (u'unzip café.zip', u'café.zip'),
-    (u'unzip foo', u'foo.zip'),
-    (u'unzip foo.zip', u'foo.zip')])
+    (u'unzip bar', u'bar.zip'),
+    (u'unzip bar.zip', u'bar.zip')])
 def test_match(zip_error, script, filename):
     zip_error(filename)
     assert match(Command(script, ''))
@@ -48,8 +48,8 @@ def test_match(zip_error, script, filename):
 @pytest.mark.parametrize('script,filename', [
     (u'unzip café', u'café.zip'),
     (u'unzip café.zip', u'café.zip'),
-    (u'unzip foo', u'foo.zip'),
-    (u'unzip foo.zip', u'foo.zip')])
+    (u'unzip bar', u'bar.zip'),
+    (u'unzip bar.zip', u'bar.zip')])
 def test_side_effect(zip_error, script, filename):
     zip_error(filename)
     side_effect(Command(script, ''), None)
@@ -63,9 +63,9 @@ def test_side_effect(zip_error, script, filename):
 
 @pytest.mark.parametrize('script,fixed,filename', [
     (u'unzip café', u"unzip café -d 'café'", u'café.zip'),
-    (u'unzip foo', u'unzip foo -d foo', u'foo.zip'),
-    (u"unzip 'foo bar.zip'", u"unzip 'foo bar.zip' -d 'foo bar'", u'foo.zip'),
-    (u'unzip foo.zip', u'unzip foo.zip -d foo', u'foo.zip')])
+    (u'unzip bar', u'unzip bar -d bar', u'bar.zip'),
+    (u"unzip 'bar bar.zip'", u"unzip 'bar bar.zip' -d 'bar bar'", u'bar.zip'),
+    (u'unzip bar.zip', u'unzip bar.zip -d bar', u'bar.zip')])
 def test_get_new_command(zip_error, script, fixed, filename):
     zip_error(filename)
     assert get_new_command(Command(script, '')) == fixed

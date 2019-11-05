@@ -1,7 +1,7 @@
 import re
 from subprocess import PIPE, Popen
 
-from thefuck.utils import (cache, for_app, replace_argument, replace_command,
+from thefeck.utils import (cache, for_app, replace_argument, replace_command,
                            which)
 
 COMMON_TYPOS = {

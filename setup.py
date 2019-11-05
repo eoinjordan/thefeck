@@ -23,11 +23,11 @@ else:
 
 version = sys.version_info[:2]
 if version < (2, 7):
-    print('thefuck requires Python version 2.7 or later' +
+    print('thefeck requires Python version 2.7 or later' +
           ' ({}.{} detected).'.format(*version))
     sys.exit(-1)
 elif (3, 0) < version < (3, 4):
-    print('thefuck requires Python version 3.4 or later' +
+    print('thefeck requires Python version 3.4 or later' +
           ' ({}.{} detected).'.format(*version))
     sys.exit(-1)
 
@@ -38,13 +38,13 @@ extras_require = {':python_version<"3.4"': ['pathlib2'],
                   ':python_version<"3.3"': ['backports.shutil_get_terminal_size'],
                   ":sys_platform=='win32'": ['win_unicode_console']}
 
-setup(name='thefuck',
+setup(name='thefeck',
       version=VERSION,
       description="Magnificent app which corrects your previous console command",
       long_description=long_description,
       author='Vladimir Iakovlev',
       author_email='nvbn.rm@gmail.com',
-      url='https://github.com/nvbn/thefuck',
+      url='https://github.com/nvbn/thefeck',
       license='MIT',
       packages=find_packages(exclude=['ez_setup', 'examples',
                                       'tests', 'tests.*', 'release']),
@@ -53,5 +53,5 @@ setup(name='thefuck',
       install_requires=install_requires,
       extras_require=extras_require,
       entry_points={'console_scripts': [
-          'thefuck = thefuck.entrypoints.main:main',
-          'fuck = thefuck.entrypoints.not_configured:main']})
+          'thefeck = thefeck.entrypoints.main:main',
+          'feck = thefeck.entrypoints.not_configured:main']})

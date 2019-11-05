@@ -5,10 +5,10 @@ from subprocess import PIPE, STDOUT
 from mock import Mock
 import pytest
 from tests.utils import CorrectedCommand, Rule
-from thefuck import const
-from thefuck.exceptions import EmptyCommand
-from thefuck.system import Path
-from thefuck.types import Command
+from thefeck import const
+from thefeck.exceptions import EmptyCommand
+from thefeck.system import Path
+from thefeck.types import Command
 
 
 class TestCorrectedCommand(object):
@@ -32,10 +32,10 @@ class TestCorrectedCommand(object):
     @pytest.mark.parametrize('script, printed, override_settings', [
         ('git branch', 'git branch', {'repeat': False, 'debug': False}),
         ('git brunch',
-         "git brunch || fuck --repeat --force-command 'git brunch'",
+         "git brunch || feck --repeat --force-command 'git brunch'",
          {'repeat': True, 'debug': False}),
         ('git brunch',
-         "git brunch || fuck --repeat --debug --force-command 'git brunch'",
+         "git brunch || feck --repeat --debug --force-command 'git brunch'",
          {'repeat': True, 'debug': True})])
     def test_run(self, capsys, settings, script, printed, override_settings):
         settings.update(override_settings)
@@ -49,7 +49,7 @@ class TestRule(object):
         match = object()
         get_new_command = object()
         load_source = mocker.patch(
-            'thefuck.types.load_source',
+            'thefeck.types.load_source',
             return_value=Mock(match=match,
                               get_new_command=get_new_command,
                               enabled_by_default=True,
@@ -110,12 +110,12 @@ class TestCommand(object):
     def Popen(self, monkeypatch):
         Popen = Mock()
         Popen.return_value.stdout.read.return_value = b'output'
-        monkeypatch.setattr('thefuck.output_readers.rerun.Popen', Popen)
+        monkeypatch.setattr('thefeck.output_readers.rerun.Popen', Popen)
         return Popen
 
     @pytest.fixture(autouse=True)
     def prepare(self, monkeypatch):
-        monkeypatch.setattr('thefuck.output_readers.rerun._wait_output',
+        monkeypatch.setattr('thefeck.output_readers.rerun._wait_output',
                             lambda *_: True)
 
     def test_from_script_calls(self, Popen, settings, os_environ):
