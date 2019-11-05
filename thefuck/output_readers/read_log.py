@@ -85,7 +85,7 @@ def get_output(script):
     if const.USER_COMMAND_MARK not in os.environ.get('PS1', ''):
         logs.warn(
             "PS1 doesn't contain user command mark, please ensure "
-            "that PS1 is not changed after The Fuck alias initialization")
+            "that PS1 is not changed after The Feck alias initialization")
         return None
 
     try:

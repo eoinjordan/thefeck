@@ -60,7 +60,7 @@ ENV_TO_ATTR = {'THEFUCK_RULES': 'rules',
                'THEFUCK_INSTANT_MODE': 'instant_mode',
                'THEFUCK_NUM_CLOSE_MATCHES': 'num_close_matches'}
 
-SETTINGS_HEADER = u"""# The Fuck settings file
+SETTINGS_HEADER = u"""# The Feck settings file
 #
 # The rules are defined as in the example bellow:
 #

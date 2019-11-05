@@ -1,18 +1,18 @@
 # Report issues
-If you have any issue with The Fuck, sorry about that, but we will do what we
+If you have any issue with The Feck, sorry about that, but we will do what we
 can to fix that. Actually, maybe we already have, so first thing to do is to
-update The Fuck and see if the bug is still there.
+update The Feck and see if the bug is still there.
 
 If it is (sorry again), check if the problem has not already been reported and
 if not, just open an issue on [GitHub](https://github.com/nvbn/thefeck) with
 the following basic information:
-  - the output of `thefeck --version` (something like `The Fuck 3.1 using
+  - the output of `thefeck --version` (something like `The Feck 3.1 using
     Python 3.5.0`);
   - your shell and its version (`bash`, `zsh`, *Windows PowerShell*, etc.);
   - your system (Debian 7, ArchLinux, Windows, etc.);
   - how to reproduce the bug;
-  - the output of The Fuck with `THEFUCK_DEBUG=true` exported (typically execute
-    `export THEFUCK_DEBUG=true` in your shell before The Fuck);
+  - the output of The Feck with `THEFUCK_DEBUG=true` exported (typically execute
+    `export THEFUCK_DEBUG=true` in your shell before The Feck);
   - if the bug only appears with a specific application, the output of that
     application and its version;
   - anything else you think is relevant.
@@ -28,7 +28,7 @@ fixes, etc.
 
 [Create and activate a Python 3 virtual environment.](https://docs.python.org/3/tutorial/venv.html)
 
-Install `The Fuck` for development:
+Install `The Feck` for development:
 
 ```bash
 pip install -r requirements.txt
